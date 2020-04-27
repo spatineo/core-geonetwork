@@ -150,7 +150,12 @@ class LocalFsHarvesterFileVisitor extends SimpleFileVisitor<Path> {
                 processXml(file);
             }
         } catch (Throwable e) {
-            LOGGER.error("An error occurred while harvesting a local file:{}.", e.getMessage());
+            if (LOGGER.isDebugEnabled()) {
+                LOGGER.debug("An error occurred while harvesting a local file:{}.", e.getMessage());
+                LOGGER.debug("full stack", e);
+            } else {
+                LOGGER.error("An error occurred while harvesting a local file:{}.", e.getMessage());
+            }
         }
         return FileVisitResult.CONTINUE;
     }
