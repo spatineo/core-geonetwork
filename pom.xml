@@ -1201,10 +1201,11 @@
       <snapshots>
         <enabled>false</enabled>
       </snapshots>
-      <id>boundless</id>
-      <name>Boundless repository</name>
-      <url>http://repo.boundlessgeo.com/main/</url>
+      <id>osgeo</id>
+      <name>OSGeo repository</name>
+      <url>https://repo.osgeo.org/repository/release/</url>
     </repository>
+    <!--
     <repository>
       <snapshots>
         <enabled>false</enabled>
@@ -1213,6 +1214,7 @@
       <name>Developer k-int repository</name>
       <url>http://maven.k-int.com/content/repositories/releases/</url>
     </repository>
+    -->
 
 
     <repository>
